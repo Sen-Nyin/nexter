@@ -5,11 +5,9 @@
 
     display: grid;
     align-items: start;
-
     // Responsive columns. Automatically calculates the number of columns based on the width of the grid items.
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-
-    gap: 6rem;
+    grid-gap: 6rem;
 }
 
 .feature {
