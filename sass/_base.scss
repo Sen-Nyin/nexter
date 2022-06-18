@@ -40,11 +40,11 @@ body {
     grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
 
     // Column width can go below 14 rem (not above) but never below the min-content
-    grid-template-columns: 8rem minmax(6rem, 1fr) repeat(8, minmax(min-content, 14rem)) inmax(6rem, 1fr);
+    grid-template-columns: 8rem minmax(6rem, 1fr) repeat(8, minmax(min-content, 14rem)) minmax(6rem, 1fr);
 
     grid-template-areas:  
         "side head head head head head head head real real real"
-        "side .    feat feat feat feat feat feat feat feat .   "
+        "side . feat feat feat feat feat feat feat feat ."
         "side stpi stpi stpi stpi stpi stco stco stco stco stco"
         "side .    home home home home home home home home .   "
         "side gall gall gall gall gall gall gall gall gall gall"
