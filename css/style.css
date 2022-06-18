@@ -1,0 +1,68 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  color: #6D5D4B;
+  font-weight: 300;
+  list-style: 1.6;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
+  grid-template-columns: 8rem minmax(6rem, 1fr) repeat(8, minmax(min-content, 14rem)) inmax(6rem, 1fr);
+  grid-template-areas: "side head head head head head head head real real real" "side .    feat feat feat feat feat feat feat feat .   " "side stpi stpi stpi stpi stpi stco stco stco stco stco" "side .    home home home home home home home home .   " "side gall gall gall gall gall gall gall gall gall gall" "side foot foot foot foot foot foot foot foot foot foot";
+}
+
+.sidebar {
+  background-color: #c69963;
+  grid-area: side;
+}
+
+.header {
+  background-color: #54483A;
+  grid-area: head;
+}
+
+.realtors {
+  background-color: #101d2c;
+  grid-area: real;
+}
+
+.features {
+  background-color: #f9f7f6;
+  grid-area: feat;
+}
+
+.story__pictures {
+  background-color: #c69963;
+  grid-area: stpi;
+}
+.story__content {
+  background-color: #f9f7f6;
+  grid-area: stco;
+}
+
+.homes {
+  background-color: #101d2c;
+  grid-area: home;
+}
+
+.gallery {
+  background-color: #54483A;
+  grid-area: gall;
+}
+
+.footer {
+  background-color: #101d2c;
+  grid-area: foot;
+}/*# sourceMappingURL=style.css.map */
