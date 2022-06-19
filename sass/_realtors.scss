@@ -16,6 +16,14 @@
         column-gap: 20px;
         row-gap: 5vh;
         align-items: center;
+
+        @include breakpoint(md, max) {
+            grid-template-columns: repeat(3, min-content max-content);
+        }
+
+        @include breakpoint(sm, max) {
+            grid-template-columns: min-content max-content;
+        }
     }
 
     &__img {

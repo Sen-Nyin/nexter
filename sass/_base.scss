@@ -11,12 +11,16 @@ $color-grey-dark-1: #54483A;
 $color-grey-dark-2: #6D5D4B;
 
 // FONT VARIABLES
-$font-primary: 'Nunito', sans-serif;
-$font-display: 'Josefin Sans', sans-serif;
+$font-primary: 'Nunito',
+sans-serif;
+$font-display: 'Josefin Sans',
+sans-serif;
 
 
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: inherit;
@@ -26,6 +30,10 @@ $font-display: 'Josefin Sans', sans-serif;
 html {
     box-sizing: border-box;
     font-size: 62.5%;
+
+    @include breakpoint(xl, max) {
+        font-size: 50%;
+    }
 }
 
 body {
@@ -42,11 +50,39 @@ body {
     // Column width can go below 14 rem (not above) but never below the min-content
     grid-template-columns: 8rem minmax(6rem, 1fr) repeat(8, minmax(min-content, 14rem)) minmax(6rem, 1fr);
 
-    grid-template-areas:  
+    grid-template-areas:
         "side head head head head head head head real real real"
         "side . feat feat feat feat feat feat feat feat ."
         "side stpi stpi stpi stpi stpi stco stco stco stco stco"
         "side .    home home home home home home home home .   "
         "side gall gall gall gall gall gall gall gall gall gall"
         "side foot foot foot foot foot foot foot foot foot foot";
+
+    @include breakpoint(lg, max) {
+        grid-template-rows: 6rem 80vh min-content 40vw repeat(3, min-content);
+        grid-template-columns: minmax(6rem, 1fr) repeat(8, minmax(min-content, 14rem)) minmax(6rem, 1fr);
+        grid-template-areas:
+            "side side side side side side side side side side"
+            "head head head head head head head real real real"
+            ".    feat feat feat feat feat feat feat feat .   "
+            "stpi stpi stpi stpi stpi stco stco stco stco stco"
+            ".    home home home home home home home home .   "
+            "gall gall gall gall gall gall gall gall gall gall"
+            "foot foot foot foot foot foot foot foot foot foot";
+    }
+
+        @include breakpoint(md, max) {
+            grid-template-rows: 6rem calc(100vh - 6rem);
+            grid-template-columns: minmax(6rem, 1fr) repeat(8, minmax(min-content, 14rem)) minmax(6rem, 1fr);
+            grid-template-areas:
+                "side side side side side side side side side side"
+                "head head head head head head head head head head"
+                "real real real real real real real real real real"
+                ".    feat feat feat feat feat feat feat feat .   "
+                "stco stco stco stco stco stco stco stco stco stco"
+                "stpi stpi stpi stpi stpi stpi stpi stpi stpi stpi"
+                ".    home home home home home home home home .   "
+                "gall gall gall gall gall gall gall gall gall gall"
+                "foot foot foot foot foot foot foot foot foot foot";
+        }
 }
